@@ -1,0 +1,1 @@
+print('emit docs/evidence_snapshot.json from ledger (placeholder)')

@@ -1,0 +1,1 @@
+Detect → Contain(OPA 412) → Diagnose(ledger) → Remediate → Review

@@ -1,0 +1,1 @@
+print('simulate coordinated fraud (placeholder)')
