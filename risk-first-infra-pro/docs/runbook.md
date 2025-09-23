@@ -1,0 +1,1 @@
+# Runbook\n1) docker compose up -d --build\n2) make demo\n3) curl POST /score\n4) python seeds/black_friday.py -> refusal\n5) python seeds/fix_pipeline.py -> green\n6) python seeds/generate_audit_snapshot.py\n

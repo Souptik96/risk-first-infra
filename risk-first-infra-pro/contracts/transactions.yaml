@@ -1,0 +1,10 @@
+name: transactions_v3
+fields:
+  - {name: txn_id, type: string, unique: true}
+  - {name: user_id, type: string, pii: true}
+  - {name: amount, type: float, min: 0, max: 100000}
+  - {name: currency, type: string, enum: [USD, INR, EUR]}
+  - {name: ts, type: timestamp, max_lag_sec: 120}
+slas:
+  freshness_sec: 60
+  completeness_pct: 99.5

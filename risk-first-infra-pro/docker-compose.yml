@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  opa:
+    image: openpolicyagent/opa:latest
+    command: ["run","--server","/policies"]
+    volumes:
+      - ./policy:/policies:ro
+    ports: ["8181:8181"]
+  riskops-score:
+    build: ./services/riskops-score
+    environment: { OPA_URL: http://opa:8181 }
+    ports: ["8001:8000"]
+    depends_on: [opa]
+  content-guard:
+    build: ./services/content-guard
+    environment: { OPA_URL: http://opa:8181 }
+    ports: ["8002:8000"]
+    depends_on: [opa]

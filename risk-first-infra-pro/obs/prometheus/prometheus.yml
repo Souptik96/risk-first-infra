@@ -1,0 +1,6 @@
+global:
+  scrape_interval: 15s
+scrape_configs:
+  - job_name: 'riskops'
+    static_configs:
+      - targets: ['riskops-score:8000','content-guard:8000']
